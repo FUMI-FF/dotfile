@@ -16,7 +16,7 @@ alias ll='exa -al --icons'
 alias copy='xclip -selection clipboard'
 
 alias vim='nvim'
-alias vini='nvim ~/.config/nvim/init.vim'
+alias vim,='nvim ~/.config/nvim/init.vim'
 alias fvm='nvim $(fzf)'
 alias emacs='nvim'
 
