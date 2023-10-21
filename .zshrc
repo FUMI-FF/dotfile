@@ -19,8 +19,13 @@ alias vim='nvim'
 alias vim,='nvim ~/.config/nvim/init.vim'
 alias fvm='nvim $(fzf)'
 alias emacs='nvim'
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
-alias dotfile='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+# zsh vi mode
+export EDITOR=nvim
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey "^O" edit-command-line
 
 #path
 export PATH=~/Project/mikanenv/osbook/devenv:$PATH
