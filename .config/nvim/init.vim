@@ -8,6 +8,7 @@ call plug#begin()
   Plug 'junegunn/fzf.vim'
   Plug 'tpope/vim-commentary'
   Plug 'hashivim/vim-terraform'
+  Plug 'nvim-lualine/lualine.nvim'
 call plug#end()
 
 color everforest
@@ -69,3 +70,10 @@ command! ImeOn :silent !fcitx5-remote -o
 
 " autocmd
 autocmd VimEnter * ImeOff
+
+" lualine
+lua << END
+require('lualine').setup {
+  options = { theme = 'everforest' }
+}
+END

@@ -21,15 +21,15 @@ alias fvm='nvim $(fzf)'
 alias emacs='nvim'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
-# zsh vi mode
-export EDITOR=nvim
-autoload -Uz edit-command-line
-zle -N edit-command-line
-bindkey "^O" edit-command-line
+# memo
+memo() {
+  date +%Y%m%d.md | xargs -I @ nvim ~/Documents/diary/@
+}
 
 #path
 export PATH=~/Project/mikanenv/osbook/devenv:$PATH
 
 # starship
 eval "$(starship init zsh)"
-
+# sheldon
+eval "$(sheldon source)"
