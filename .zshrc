@@ -28,6 +28,7 @@ memo() {
 
 #path
 export PATH=~/Project/mikanenv/osbook/devenv:$PATH
+export PATH=~/.cargo/bin:$PATH
 
 # starship
 eval "$(starship init zsh)"
